@@ -1,6 +1,6 @@
 using Mediator.Shared.Models;
 using Mediator.Shared.TestHandlers;
-using SimpleMediator = Mediator.Simple;
+using SimpleMediator = Mediator.Impl.Simple;
 using OfficialMediatr = MediatR.ISender;
 
 Guid Id = Guid.NewGuid();
@@ -25,6 +25,9 @@ builder.Services.AddMediatR(cfg =>
 builder.Services.AddTransient<SimpleMediator.Interfaces.ISender, SimpleMediator.Sender>();
 builder.Services.AddTransient<SimpleMediator.Interfaces.IRequestHandler<SimpleMediatorCommand,
     TestResponse>, SimpleMediatorHandler>();
+
+
+// add your mediator service here...
 
 
 var app = builder.Build();
@@ -56,6 +59,9 @@ app.MapGet("/simple", async (SimpleMediator.Interfaces.ISender sender) =>
 })
 .WithName("SimpleMediator_Send")
 .WithOpenApi();
+
+
+// Add your api endpoint here...
 
 
 app.Run();

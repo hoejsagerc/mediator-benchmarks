@@ -1,5 +1,5 @@
 using Mediator.Shared.Models;
-using Mediator.Simple.Interfaces;
+using Mediator.Impl.Simple.Interfaces;
 
 namespace Mediator.Shared.TestHandlers;
 

@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5F627C37-EF6C-48ED-9439-2CEE544DB20D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediator.Simple", "src\Mediator.Simple\Mediator.Simple.csproj", "{B149F221-7B19-4259-B7B7-52505B973C2E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediator.Impl.Simple", "src\Mediator.Impl.Simple\Mediator.Impl.Simple.csproj", "{B149F221-7B19-4259-B7B7-52505B973C2E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediator.Benchmarks", "src\Mediator.Benchmarks\Mediator.Benchmarks.csproj", "{E6109640-5F84-47C7-930C-F524C106C5D1}"
 EndProject

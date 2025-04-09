@@ -20,7 +20,10 @@ public class MediatorImplementationBenchmarks
 
 
     // Simple Mediator implementation
-    private Mediator.Simple.Interfaces.ISender _simpleMediator = default!;
+    private Mediator.Impl.Simple.Interfaces.ISender _simpleMediator = default!;
+
+
+    // add your mediator field here...
 
 
 
@@ -38,11 +41,14 @@ public class MediatorImplementationBenchmarks
         {
             // Set up Simple Mediator implementation
             var services = new ServiceCollection();
-            services.AddTransient<Mediator.Simple.Interfaces.ISender, Mediator.Simple.Sender>();
-            services.AddTransient<Mediator.Simple.Interfaces.IRequestHandler<SimpleMediatorCommand, TestResponse>, SimpleMediatorHandler>();
+            services.AddTransient<Mediator.Impl.Simple.Interfaces.ISender, Mediator.Impl.Simple.Sender>();
+            services.AddTransient<Mediator.Impl.Simple.Interfaces.IRequestHandler<SimpleMediatorCommand, TestResponse>, SimpleMediatorHandler>();
             var serviceProvider = services.BuildServiceProvider();
-            _simpleMediator = serviceProvider.GetRequiredService<Mediator.Simple.Interfaces.ISender>();
+            _simpleMediator = serviceProvider.GetRequiredService<Mediator.Impl.Simple.Interfaces.ISender>();
         }
+
+
+        // add service registration for <your mediator> MediatR
     }
 
     [Benchmark(Baseline = true)]
@@ -58,4 +64,6 @@ public class MediatorImplementationBenchmarks
     {
         return await _simpleMediator.Send(new SimpleMediatorCommand(_requestId, _requestName, _requestAge));
     }
+
+    // add your benchmark method for <your mediator> here...
 }

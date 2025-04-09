@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\Mediator.Simple\Mediator.Simple.csproj" />
+    <ProjectReference Include="..\Mediator.Impl.Simple\Mediator.Impl.Simple.csproj" />
     <ProjectReference Include="..\Mediator.Shared\Mediator.Shared.csproj" />
   </ItemGroup>
 

@@ -11,7 +11,7 @@ export let options = {
 };
 
 export default function () {
-  const url = 'http://localhost:8080/simple';
+  const url = 'http://localhost:8080/simple'; //<---- change to your endpoint
 
 
   // Make an HTTP POST request to the API

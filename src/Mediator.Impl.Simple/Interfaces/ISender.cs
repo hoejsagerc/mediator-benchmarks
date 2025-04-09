@@ -1,4 +1,4 @@
-namespace Mediator.Simple.Interfaces;
+namespace Mediator.Impl.Simple.Interfaces;
 
 public interface ISender
 {

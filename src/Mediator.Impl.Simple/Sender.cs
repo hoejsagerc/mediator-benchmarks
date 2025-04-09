@@ -1,7 +1,7 @@
-using Mediator.Simple.Interfaces;
+using Mediator.Impl.Simple.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Mediator.Simple;
+namespace Mediator.Impl.Simple;
 
 public class Sender : ISender
 {
