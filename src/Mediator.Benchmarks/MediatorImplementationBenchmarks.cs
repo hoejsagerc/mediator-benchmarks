@@ -1,5 +1,5 @@
-using BenchmarkDotNet;
 using BenchmarkDotNet.Attributes;
+using Mediator.Impl.NickChapsas.DependencyInjection;
 using Mediator.Shared.Models;
 using Mediator.Shared.TestHandlers;
 using Microsoft.Extensions.DependencyInjection;
@@ -23,8 +23,11 @@ public class MediatorImplementationBenchmarks
     private Mediator.Impl.Simple.Interfaces.ISender _simpleMediator = default!;
 
 
-    // add your mediator field here...
+    // Nick Chapsas Mediator implementation
+    private Mediator.Impl.NickChapsas.Interfaces.IMediator _nickChapsasMediator = default!;
 
+    // Another simple Mediator implementation
+    private Mediator.Impl.AnotherSimple.Interfaces.IMediator _anotherSimpleMediator = default!;
 
 
     [GlobalSetup]
@@ -41,14 +44,28 @@ public class MediatorImplementationBenchmarks
         {
             // Set up Simple Mediator implementation
             var services = new ServiceCollection();
-            services.AddTransient<Mediator.Impl.Simple.Interfaces.ISender, Mediator.Impl.Simple.Sender>();
+            services.AddSingleton<Mediator.Impl.Simple.Interfaces.ISender, Mediator.Impl.Simple.Sender>();
             services.AddTransient<Mediator.Impl.Simple.Interfaces.IRequestHandler<SimpleMediatorCommand, TestResponse>, SimpleMediatorHandler>();
             var serviceProvider = services.BuildServiceProvider();
             _simpleMediator = serviceProvider.GetRequiredService<Mediator.Impl.Simple.Interfaces.ISender>();
         }
 
+        // Nick Chapsas Mediator Implementation
+        {
+            var services = new ServiceCollection();
+            services.AddMediator(ServiceLifetime.Transient, typeof(NickChapsasMediatorHandler));
+            var serviceProvider = services.BuildServiceProvider();
+            _nickChapsasMediator = serviceProvider.GetRequiredService<Mediator.Impl.NickChapsas.Interfaces.IMediator>();
+        }
 
-        // add service registration for <your mediator> MediatR
+        // Another simple Mediator implementation
+        {
+            var services = new ServiceCollection();
+            services.AddSingleton<Mediator.Impl.AnotherSimple.Interfaces.IMediator, Mediator.Impl.AnotherSimple.Mediator>();
+            services.AddTransient<Mediator.Impl.AnotherSimple.Interfaces.IRequestHandler<AnotherSimpleMediatorCommand, TestResponse>, AnotherSimpleMediatorCommandHandler>();
+            var serviceProvider = services.BuildServiceProvider();
+            _anotherSimpleMediator = serviceProvider.GetRequiredService<Mediator.Impl.AnotherSimple.Interfaces.IMediator>();
+        }
     }
 
     [Benchmark(Baseline = true)]
@@ -65,5 +82,16 @@ public class MediatorImplementationBenchmarks
         return await _simpleMediator.Send(new SimpleMediatorCommand(_requestId, _requestName, _requestAge));
     }
 
-    // add your benchmark method for <your mediator> here...
+
+    [Benchmark]
+    public async Task<TestResponse> NickChapsasMediatr_Send()
+    {
+        return await _nickChapsasMediator.SendAsync(new NickChapsasMediatorCommand(_requestId, _requestName, _requestAge));
+    }
+
+    [Benchmark]
+    public async Task<TestResponse> AnotherSimpleMediatr_Send()
+    {
+        return await _anotherSimpleMediator.Send<AnotherSimpleMediatorCommand, TestResponse>(new AnotherSimpleMediatorCommand(_requestId, _requestName, _requestAge));
+    }
 }

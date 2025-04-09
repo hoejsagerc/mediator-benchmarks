@@ -13,6 +13,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Mediator.Impl.AnotherSimple\Mediator.Impl.AnotherSimple.csproj" />
+    <ProjectReference Include="..\Mediator.Impl.NickChapsas.DependencyInjection\Mediator.Impl.NickChapsas.DependencyInjection.csproj" />
+    <ProjectReference Include="..\Mediator.Impl.NickChapsas\Mediator.Impl.NickChapsas.csproj" />
     <ProjectReference Include="..\Mediator.Impl.Simple\Mediator.Impl.Simple.csproj" />
     <ProjectReference Include="..\Mediator.Shared\Mediator.Shared.csproj" />
   </ItemGroup>

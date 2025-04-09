@@ -7,13 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Mediatr" Version="12.5.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Mediator.Impl.AnotherSimple\Mediator.Impl.AnotherSimple.csproj" />
     <ProjectReference Include="..\Mediator.Impl.NickChapsas\Mediator.Impl.NickChapsas.csproj" />
-    <ProjectReference Include="..\Mediator.Impl.Simple\Mediator.Impl.Simple.csproj" />
   </ItemGroup>
 
 </Project>
