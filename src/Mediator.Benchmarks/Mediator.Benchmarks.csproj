@@ -2,10 +2,14 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Mediator.Simple\Mediator.Simple.csproj" />
+    <ProjectReference Include="..\Mediator.Shared\Mediator.Shared.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="BenchmarkDotnet" Version="0.14.0" />
     <PackageReference Include="Mediatr" Version="12.5.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.4" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.4" />
   </ItemGroup>
 
   <PropertyGroup>

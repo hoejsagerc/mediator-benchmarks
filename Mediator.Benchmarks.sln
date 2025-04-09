@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediator.Simple", "src\Medi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediator.Benchmarks", "src\Mediator.Benchmarks\Mediator.Benchmarks.csproj", "{E6109640-5F84-47C7-930C-F524C106C5D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediator.Performance", "src\Mediator.Performance\Mediator.Performance.csproj", "{6D18E4C3-02AE-4536-B1F1-DBF650CFBB5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediator.Shared", "src\Mediator.Shared\Mediator.Shared.csproj", "{FBC05FBF-1E35-4EDE-BF36-7938F62FCB3F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,9 +30,19 @@ Global
 		{E6109640-5F84-47C7-930C-F524C106C5D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6109640-5F84-47C7-930C-F524C106C5D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6109640-5F84-47C7-930C-F524C106C5D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D18E4C3-02AE-4536-B1F1-DBF650CFBB5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D18E4C3-02AE-4536-B1F1-DBF650CFBB5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D18E4C3-02AE-4536-B1F1-DBF650CFBB5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D18E4C3-02AE-4536-B1F1-DBF650CFBB5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBC05FBF-1E35-4EDE-BF36-7938F62FCB3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBC05FBF-1E35-4EDE-BF36-7938F62FCB3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBC05FBF-1E35-4EDE-BF36-7938F62FCB3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBC05FBF-1E35-4EDE-BF36-7938F62FCB3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B149F221-7B19-4259-B7B7-52505B973C2E} = {5F627C37-EF6C-48ED-9439-2CEE544DB20D}
 		{E6109640-5F84-47C7-930C-F524C106C5D1} = {5F627C37-EF6C-48ED-9439-2CEE544DB20D}
+		{6D18E4C3-02AE-4536-B1F1-DBF650CFBB5A} = {5F627C37-EF6C-48ED-9439-2CEE544DB20D}
+		{FBC05FBF-1E35-4EDE-BF36-7938F62FCB3F} = {5F627C37-EF6C-48ED-9439-2CEE544DB20D}
 	EndGlobalSection
 EndGlobal
