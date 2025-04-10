@@ -1,6 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <ProjectReference Include="..\Mediator.Impl.AnotherSimple\Mediator.Impl.AnotherSimple.csproj" />
+    <ProjectReference
+      Include="..\Mediator.Impl.NickChapsas\Mediator.Impl.NickChapsas.csproj" />
     <ProjectReference Include="..\Mediator.Impl.Simple\Mediator.Impl.Simple.csproj" />
     <ProjectReference Include="..\Mediator.Shared\Mediator.Shared.csproj" />
   </ItemGroup>
@@ -9,7 +12,8 @@
     <PackageReference Include="BenchmarkDotnet" Version="0.14.0" />
     <PackageReference Include="Mediatr" Version="12.5.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.4" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.4" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions"
+      Version="9.0.4" />
   </ItemGroup>
 
   <PropertyGroup>

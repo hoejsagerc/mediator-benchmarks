@@ -13,13 +13,21 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediator.Performance", "src
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediator.Shared", "src\Mediator.Shared\Mediator.Shared.csproj", "{FBC05FBF-1E35-4EDE-BF36-7938F62FCB3F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediator.Impl.NickChapsas", "src\Mediator.Impl.NickChapsas\Mediator.Impl.NickChapsas.csproj", "{D48A2651-A62B-4260-A035-517EB15607F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediator.Impl.NickChapsas.DependencyInjection", "src\Mediator.Impl.NickChapsas.DependencyInjection\Mediator.Impl.NickChapsas.DependencyInjection.csproj", "{88DDF560-7C7D-43A6-AAA9-4E6117330204}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediator.Impl.AnotherSimple", "src\Mediator.Impl.AnotherSimple\Mediator.Impl.AnotherSimple.csproj", "{6F0D21C3-C6B5-437D-9604-684D6019750C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{B149F221-7B19-4259-B7B7-52505B973C2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -38,11 +46,32 @@ Global
 		{FBC05FBF-1E35-4EDE-BF36-7938F62FCB3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBC05FBF-1E35-4EDE-BF36-7938F62FCB3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBC05FBF-1E35-4EDE-BF36-7938F62FCB3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D48A2651-A62B-4260-A035-517EB15607F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D48A2651-A62B-4260-A035-517EB15607F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D48A2651-A62B-4260-A035-517EB15607F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D48A2651-A62B-4260-A035-517EB15607F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88DDF560-7C7D-43A6-AAA9-4E6117330204}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88DDF560-7C7D-43A6-AAA9-4E6117330204}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88DDF560-7C7D-43A6-AAA9-4E6117330204}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88DDF560-7C7D-43A6-AAA9-4E6117330204}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F0D21C3-C6B5-437D-9604-684D6019750C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F0D21C3-C6B5-437D-9604-684D6019750C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F0D21C3-C6B5-437D-9604-684D6019750C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F0D21C3-C6B5-437D-9604-684D6019750C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B149F221-7B19-4259-B7B7-52505B973C2E} = {5F627C37-EF6C-48ED-9439-2CEE544DB20D}
 		{E6109640-5F84-47C7-930C-F524C106C5D1} = {5F627C37-EF6C-48ED-9439-2CEE544DB20D}
 		{6D18E4C3-02AE-4536-B1F1-DBF650CFBB5A} = {5F627C37-EF6C-48ED-9439-2CEE544DB20D}
 		{FBC05FBF-1E35-4EDE-BF36-7938F62FCB3F} = {5F627C37-EF6C-48ED-9439-2CEE544DB20D}
+		{D48A2651-A62B-4260-A035-517EB15607F8} = {5F627C37-EF6C-48ED-9439-2CEE544DB20D}
+		{88DDF560-7C7D-43A6-AAA9-4E6117330204} = {5F627C37-EF6C-48ED-9439-2CEE544DB20D}
+		{6F0D21C3-C6B5-437D-9604-684D6019750C} = {5F627C37-EF6C-48ED-9439-2CEE544DB20D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ACB97D60-D30D-4311-A6FB-836646DCD653}
 	EndGlobalSection
 EndGlobal
