@@ -2,11 +2,11 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
-namespace Mediator.Impl.NickChapsas.DependencyInjection;
+namespace Mediator.Impl.NickChapsas;
 
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection AddMediator(
+    public static IServiceCollection AddNickMediator(
         this IServiceCollection services,
         ServiceLifetime lifetime,
         params Type[] markers)
@@ -21,8 +21,9 @@ public static class ServiceCollectionExtensions
 
             requests.ForEach(x =>
             {
-                handlerInfo[x] = 
-                    handlers.SingleOrDefault(xx => x == xx.GetInterface("IRequestHandler`2")!.GetGenericArguments()[0]);
+                handlerInfo[x] =
+                    handlers.SingleOrDefault(xx => x == xx.GetInterface("IRequestHandler`2")!.GetGenericArguments()[0])
+                    ?? throw new InvalidOperationException($"No handler found for {x}");
             });
 
             var serviceDescriptors = handlers.Select(x => new ServiceDescriptor(x, x, lifetime));

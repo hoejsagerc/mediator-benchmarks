@@ -2,8 +2,8 @@ using Mediator.Shared.Models;
 using Mediator.Shared.TestHandlers;
 using SimpleMediator = Mediator.Impl.Simple;
 using OfficialMediatr = MediatR.ISender;
-using Mediator.Impl.NickChapsas.DependencyInjection;
-using Mediator.Impl.NickChapsas.Interfaces;
+using Mediator.Impl.NickChapsas;
+
 
 Guid Id = Guid.NewGuid();
 string Name = "TestName";
@@ -30,7 +30,7 @@ builder.Services.AddTransient<SimpleMediator.Interfaces.IRequestHandler<SimpleMe
 
 
 // Nick Chapsas Mediator Implementation
-builder.Services.AddMediator(ServiceLifetime.Transient, typeof(NickChapsasMediatorHandler));
+builder.Services.AddNickMediator(ServiceLifetime.Transient, typeof(NickChapsasMediatorHandler));
 
 
 // Another simple Mediator implementation

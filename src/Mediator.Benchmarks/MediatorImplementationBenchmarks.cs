@@ -1,8 +1,8 @@
 using BenchmarkDotNet.Attributes;
-using Mediator.Impl.NickChapsas.DependencyInjection;
 using Mediator.Shared.Models;
 using Mediator.Shared.TestHandlers;
 using Microsoft.Extensions.DependencyInjection;
+using Mediator.Impl.NickChapsas;
 
 namespace Mediator.Benchmarks;
 
@@ -53,7 +53,7 @@ public class MediatorImplementationBenchmarks
         // Nick Chapsas Mediator Implementation
         {
             var services = new ServiceCollection();
-            services.AddMediator(ServiceLifetime.Transient, typeof(NickChapsasMediatorHandler));
+            services.AddNickMediator(ServiceLifetime.Transient, typeof(NickChapsasMediatorHandler));
             var serviceProvider = services.BuildServiceProvider();
             _nickChapsasMediator = serviceProvider.GetRequiredService<Mediator.Impl.NickChapsas.Interfaces.IMediator>();
         }
